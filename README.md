@@ -9,7 +9,6 @@ Created a pydantic model.
 Each post in a separate json file.
 Searching posts using reddit search api and limited to 20 posts.
 
-
 ### Post Summarization
 We implemented a summarization module using OpenAI's GPT-4o-mini model to generate summary of each post. 
 I chose GPT-4o-mini since it's the most value/money model available in OpenAI API.
@@ -58,3 +57,5 @@ I added a actionable insights at the end.
 ### Technical Dept
 - **Configuration Manager**: Setup a configuration manager to handle secrets, and other configs.
 - **Robustness**: Better handle errors in the code in a way that the program can continue to run without interference.
+- **Consistency**: Better structure prompts and classes.
+- **Observability**: Emit better logs from all parts of the codebase.
