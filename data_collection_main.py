@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 
 def main():
     load_dotenv()
-    reddit_data_collector = RedditDataCollector(r"C:\repos\sales_competitor_analysis\posts")
+    reddit_data_collector = RedditDataCollector(r"C:\repos\sales_competitor_analysis\data\posts")
     reddit_data_collector.collect_posts("Sentinel One", 20)
 
 

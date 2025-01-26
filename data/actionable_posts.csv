@@ -1,0 +1,22 @@
+id,title,summary,competitor,sentiment,author_name,creation_time_utc,number_of_comments,url,action_object
+1ggyo5m,Swapping out SentinelOne for BlackPoint Cyber Only + Built-In Windows Defender,"The poster is considering switching from SentinelOne to BlackPoint Cyber's MDR SNAP agent, believing it offers greater benefits at a similar price point.",blackpoint cyber,Negative,Clean_Background_318,2024-11-01 05:46:40+00:00,10,https://www.reddit.com/r/msp/comments/1ggyo5m/swapping_out_sentinelone_for_blackpoint_cyber/,"```json
+{
+    ""take_action"": true,
+    ""what_action"": ""Reach out to the customer to address their concerns and provide more information on SentinelOne's benefits and any recent updates or improvements."",
+    ""response"": ""Hi Clean_Background_318,\n\nThank you for sharing your thoughts on the potential switch from SentinelOne to BlackPoint Cyber. We greatly value customer feedback and would love the opportunity to understand your concerns more fully. SentinelOne continually updates its features and capabilities, and we are committed to providing the best service possible. \n\nCould you please provide more details on the specific benefits you are looking for and any issues you have encountered? We would be happy to discuss how SentinelOne can meet your needs, possibly even exceeding what you've found elsewhere.\n\nLooking forward to hearing from you.\n\nBest regards,\n[Your Name]\nSentinelOne Support Team""
+}
+```"
+1helmpo,SentinelOne Missed Threats,"The poster expresses frustration after SentinelOne failed to detect a significant infection on a client's PC, leading them to consider switching to Windows Defender and using Blackpoint Cyber for additional protection.",blackpoint cyber,Negative,Clean_Background_318,2024-12-15 05:15:06+00:00,10,https://www.reddit.com/r/msp/comments/1helmpo/sentinelone_missed_threats/,"```json
+{
+    ""take_action"": true,
+    ""what_action"": ""Reach out to the customer, apologize for the negative experience, offer support and solution options, and encourage them to share more specific details about the incident if comfortable."",
+    ""response"": ""Hello Clean_Background_318,\n\nI'm sorry to hear about your recent experience with SentinelOne. We take all feedback seriously and understand the importance of reliable threat detection. We would like to discuss this matter further to gather more details and understand how we can assist in resolving this for you. Please feel free to reach out to our support team directly or provide more information here so we can expedite a suitable solution for you. We appreciate your patience and look forward to ensuring your security needs are fully met.\n\nBest regards,\n[Your Name] \nCustomer Success Team""
+}
+```"
+1i91rqa,DNSFilter with SentinelOne,"The poster discusses issues with co-existing web filtering software (DNSFilter) and SentinelOne, specifically regarding challenges in unquarantining machines after infections due to the interplay between the two services.",dnsfilter,Negative,schwags,2025-01-24 18:06:30+00:00,10,https://www.reddit.com/r/msp/comments/1i91rqa/dnsfilter_with_sentinelone/,"```json
+{
+    ""take_action"": true,
+    ""what_action"": ""Reach out to the customer to understand the specific issues they are facing with SentinelOne working alongside DNSFilter and offer technical support or a consultation to resolve the problem."",
+    ""response"": ""Hello schwags, thanks for sharing your experience with using SentinelOne alongside DNSFilter. We're sorry to hear about the challenges you're facing with unquarantining machines. We’d love to help you resolve these issues and ensure our software works seamlessly in your environment. Could you provide more details about the specific problems you're encountering? Our technical team is available to assist you. Please feel free to reach out to us directly.""
+}
+```"

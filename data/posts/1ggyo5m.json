@@ -1,0 +1,81 @@
+{
+    "title": "Swapping out SentinelOne for BlackPoint Cyber Only + Built-In Windows Defender",
+    "text": "Im debating on throwing in the towel on SentinelOne and just using BlackPoints MDR SNAP agent, integrated with built in windows defender. I feel the price point is almost the same and will offer a greater benefit as their agent monitors more than just AV. Anyone else do this or think we are crazy?",
+    "score": 11,
+    "creation_time_utc": "2024-11-01 05:46:40",
+    "id": "1ggyo5m",
+    "url": "https://www.reddit.com/r/msp/comments/1ggyo5m/swapping_out_sentinelone_for_blackpoint_cyber/",
+    "author_name": "Clean_Background_318",
+    "comments": [
+        {
+            "id": "lutghxm",
+            "text": "Been using this exact combo of MDE + BPC for just over a year. It is very effective and we have been happy with the service from BPC. Defender is second to none in extracting the reporting, the BPC’s SOC is well trainer. Recommend.",
+            "score": 12,
+            "author_name": "Pimbata",
+            "creation_time_utc": "2024-11-01 05:58:02"
+        },
+        {
+            "id": "lutzyvi",
+            "text": "We did this.  Very happy with BP SOC.",
+            "score": 8,
+            "author_name": "Slicester1",
+            "creation_time_utc": "2024-11-01 09:51:39"
+        },
+        {
+            "id": "lutwbz5",
+            "text": "So you’re using what’s built in and not the licensed Defender for Business?",
+            "score": 4,
+            "author_name": "lilgator815",
+            "creation_time_utc": "2024-11-01 09:10:09"
+        },
+        {
+            "id": "luum898",
+            "text": "Have you considered Huntress? It also uses Defender AV, and allows you to manage it similar to MDE Plan 1.",
+            "score": 11,
+            "author_name": "DumplingTree_",
+            "creation_time_utc": "2024-11-01 12:58:25"
+        },
+        {
+            "id": "luv4509",
+            "text": "We are doing this. Plus with BP you get M365 SOC, which has been amazing for us so far.",
+            "score": 3,
+            "author_name": "7FootElvis",
+            "creation_time_utc": "2024-11-01 14:42:00"
+        },
+        {
+            "id": "luu18kj",
+            "text": "Built-in Defender as in onboarded to Defender for Business or just consumer mode?",
+            "score": 2,
+            "author_name": "Conditional_Access",
+            "creation_time_utc": "2024-11-01 10:05:15"
+        },
+        {
+            "id": "luwzsqk",
+            "text": "Would love to have you onboard! Defender is creeping up on the most integrated AV we have, first right now is S1. Doesn't mean S1 is the best but that is why we like to give the freedom to our partners to choose whatever AV/EDR they want us to monitor.",
+            "score": 2,
+            "author_name": "Blackpoint-Xavier",
+            "creation_time_utc": "2024-11-01 20:37:13"
+        },
+        {
+            "id": "luxbkm2",
+            "text": "We use BP and integrate with SentinelOne. I was told they are working on a 2 way integration with s1 also",
+            "score": 2,
+            "author_name": "johnsonflix",
+            "creation_time_utc": "2024-11-01 21:41:40"
+        },
+        {
+            "id": "luyit1v",
+            "text": "You'll be happy with BlackPoint Cyber. Have been a partner for several years now and am very happy",
+            "score": 2,
+            "author_name": "jhartnerd123",
+            "creation_time_utc": "2024-11-02 02:09:33"
+        },
+        {
+            "id": "lv2nssf",
+            "text": "I was at a conference a few weeks ago and Blackpoint told me you need the paid license for it to work as they designed the solution but they are coming out with a “version” soon that will work with free Defender.",
+            "score": 1,
+            "author_name": "SubSharker",
+            "creation_time_utc": "2024-11-02 20:32:58"
+        }
+    ]
+}

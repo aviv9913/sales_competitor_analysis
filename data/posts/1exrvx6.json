@@ -1,0 +1,81 @@
+{
+    "title": "Ninja Forcing Us to Pay $20,000 for SentinelOne License",
+    "text": "I need to vent about a frustrating situation we're dealing with at work. My colleague recently tried to *test* SentinelOne, which we apparently \"purchased\" through Ninja. Somehow, this turned into a $20,000 charge! The kicker? In our country, only a CEO can legally sign off on purchases of this nature. My colleague certainly doesn’t have that authority.\n\nWe reached out to Ninja to explain the situation, but they’re insisting we pay up. This seems ridiculous given the circumstances. Has anyone else dealt with something like this?\n\nHonestly, it feels like we're being strong-armed into paying for something we never intended to buy in the first place. \n\nUpdate:\n\nQuick update on the situation: I spoke with a representative from Ninja, and they were very understanding. We clarified the misunderstanding, and they agreed to remove the claim. Ninja handled it professionally, and I appreciate how cool they’ve been about the whole thing.\n\nI also want to clarify that we share a lot of the blame here. Ninja has been very professional about handling the situation. I'm glad we were able to resolve this amicably.\n\nThe big takeaway here is that we probably should have escalated the issue to the right person sooner.\nLesson learned! Thanks to everyone who offered advice and support!",
+    "score": 165,
+    "creation_time_utc": "2024-08-21 15:02:22",
+    "id": "1exrvx6",
+    "url": "https://www.reddit.com/r/msp/comments/1exrvx6/ninja_forcing_us_to_pay_20000_for_sentinelone/",
+    "author_name": "Afleines",
+    "comments": [
+        {
+            "id": "lj7z6d0",
+            "text": "I’ve learned to avoid doing RMM A/V integrations. Counts are rarely accurate. I would ask to escalate or threaten to leave.",
+            "score": 116,
+            "author_name": "stevo10189",
+            "creation_time_utc": "2024-08-21 15:11:23"
+        },
+        {
+            "id": "lj8mpmr",
+            "text": "I got a call from Ninja and we scheduled meeting, i hope we can come to an understanding that works for both parties. I will update you guys when i know more, thanks for all your input!",
+            "score": 38,
+            "author_name": "Afleines",
+            "creation_time_utc": "2024-08-21 17:12:36"
+        },
+        {
+            "id": "lj7zk7f",
+            "text": "The only answer here is speak to your lawyers. The vendor will insist that the laws of the US state they are headquartered in apply. You will insist that your countries laws apply. Either one side backs down or you both spend much more than the bill is worth to fight in court. You will need a lawyers advice on if / how to best convince them to back down. But you may have to drop everything you get from that vendor in the process.",
+            "score": 87,
+            "author_name": "perthguppy",
+            "creation_time_utc": "2024-08-21 15:13:21"
+        },
+        {
+            "id": "lj7zv60",
+            "text": "If the law in your country says only a CEO can enter a contract then you need to get an attorney and have them contact Ninja.",
+            "score": 36,
+            "author_name": "DeadStockWalking",
+            "creation_time_utc": "2024-08-21 15:14:55"
+        },
+        {
+            "id": "lj80feg",
+            "text": "What country are you in?",
+            "score": 16,
+            "author_name": "Beauregard_Jones",
+            "creation_time_utc": "2024-08-21 15:17:49"
+        },
+        {
+            "id": "lj8p8tc",
+            "text": "Uhm... how would you ramp up 20k$ in charges when trying to \"test\" SentinelOne? Did you deploy it to 5000 endpoints for testing..?",
+            "score": 14,
+            "author_name": "b00nish",
+            "creation_time_utc": "2024-08-21 17:25:33"
+        },
+        {
+            "id": "lj8gvle",
+            "text": "I’m kind of surprised. Ninja has been so easy  to work with for us. We canceled our sentinelone one through them and it was insanely easy. I can’t imagine they wouldnt be willing to work with you on this.",
+            "score": 12,
+            "author_name": "blamblamtarzan",
+            "creation_time_utc": "2024-08-21 16:42:43"
+        },
+        {
+            "id": "lj824ta",
+            "text": "u/Afleines sorry for the frustration here and obviously want to get the details straightened out and this issue resolved. Mind sharing your company name so we can investigate? I just sent you a DM.",
+            "score": 52,
+            "author_name": "jcroweNinjaRMM",
+            "creation_time_utc": "2024-08-21 15:26:35"
+        },
+        {
+            "id": "lj8fv48",
+            "text": "I had this problem before, in S1 when you setup a new customer you can indicate that it is a “trial”, which one would assume is a trial. PAX tried billing me for it and I told them I signed up for a trial and to go away. After 6 months of fighting they eventually went away lol\n\nThis should be refunded by S1 to Ninja and then you",
+            "score": 9,
+            "author_name": "theresmorethan42",
+            "creation_time_utc": "2024-08-21 16:37:31"
+        },
+        {
+            "id": "lj9b5ss",
+            "text": "Why is ninja charging for so much?  \nit sounds like your staff \"tested\" and deployed to all nodes in a policy change.\n\nIf thats thew case, the charges are fine... and your MSP should consider user permissions for technicians",
+            "score": 8,
+            "author_name": "Diavunollc",
+            "creation_time_utc": "2024-08-21 19:18:18"
+        }
+    ]
+}

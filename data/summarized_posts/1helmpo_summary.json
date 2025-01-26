@@ -1,0 +1,12 @@
+{
+    "is_customer": true,
+    "summary": "The poster expresses frustration after SentinelOne failed to detect a significant infection on a client's PC, leading them to consider switching to Windows Defender and using Blackpoint Cyber for additional protection.",
+    "competitor": "Blackpoint Cyber",
+    "advantages": [],
+    "disadvantages": [
+        "Security Performance",
+        "Customer Support"
+    ],
+    "sentiment": "Negative",
+    "id": "1helmpo"
+}

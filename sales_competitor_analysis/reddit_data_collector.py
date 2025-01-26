@@ -36,25 +36,8 @@ class RedditDataCollector:
                     self.logger.error(f"Error processing {comment.id=}, {comment.body=}, {e=}")
 
             reddit_post = RedditPost.from_reddit(post, comments)
-            self._save_post(reddit_post)
+            path_str = f"{self.destination_path}/{post.id}.json"
+            reddit_post.save_to_json_file(path_str)
             posts_count += 1
 
         self.logger.info(f"Collected {posts_count} posts")
-
-    def _save_post(self, post: RedditPost):
-        self.logger.info(f"Saving {post.id=} to {self.destination_path}")
-        try:
-            path_str = f"{self.destination_path}/{post.id}.json"
-            Path(path_str).write_text(post.model_dump_json(indent=4), encoding="utf-8")
-        except Exception as e:
-            self.logger.error(f"Error saving {post.id=}, {post.url=}, {e=}")
-        self.logger.info(f"Saved {post.id=} to {self.destination_path}")
-
-    def _load_post(self, file_path) -> List[RedditPost]:
-        self.logger.info(f"Loading post from {file_path}")
-        try:
-            post = RedditPost.model_validate_json(Path(file_path).read_text(encoding="utf-8"))
-            self.logger.info(f"Loaded {post.id=} from {file_path}")
-            return post
-        except Exception as e:
-            self.logger.error(f"Error reading {file_path=}, {e=}")

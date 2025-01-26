@@ -1,0 +1,74 @@
+{
+    "title": "SentinelOne update broke our internet access",
+    "text": "After the latest agent update (23.3) was rolled out to our macOS laptops, many devices encountered significant internet connectivity problems, including frequent disconnections and poor performance.\n\nWe’ve opened a ticket with SentinelOne to investigate the root cause, but I find it very weird that an update broke the internet just for us.\n\nWas anyone else affected by the update?",
+    "score": 31,
+    "creation_time_utc": "2024-11-29 23:00:22",
+    "id": "1h2yak5",
+    "url": "https://www.reddit.com/r/msp/comments/1h2yak5/sentinelone_update_broke_our_internet_access/",
+    "author_name": "slyu4ever",
+    "comments": [
+        {
+            "id": "lzmzc5l",
+            "text": "If you’re running MacOS 15.0, you will experience intermittent connectivity issues with any AV/EDR that has a network filter component. It’s a MacOS issue that’s been resolved in 15.0.1",
+            "score": 46,
+            "author_name": "Skrunky",
+            "creation_time_utc": "2024-11-30 00:05:53"
+        },
+        {
+            "id": "lzmpf6f",
+            "text": "Did you check to make sure no one accidentally turned off network access on the endpoint(s)?",
+            "score": 6,
+            "author_name": "ColonelJoe",
+            "creation_time_utc": "2024-11-29 23:03:02"
+        },
+        {
+            "id": "lzmy36o",
+            "text": "When did this update occur? I’m curious if mine is having that same issue",
+            "score": 1,
+            "author_name": "ArchonTheta",
+            "creation_time_utc": "2024-11-29 23:57:41"
+        },
+        {
+            "id": "lzmyduz",
+            "text": "Have not seen this today or any time recently.",
+            "score": 1,
+            "author_name": "IllustriousRaccoon25",
+            "creation_time_utc": "2024-11-29 23:59:36"
+        },
+        {
+            "id": "lzr1xoq",
+            "text": "Yes same thing happened to me but running Ventura",
+            "score": 1,
+            "author_name": "Ordinary_Wish_2918",
+            "creation_time_utc": "2024-11-30 18:51:01"
+        },
+        {
+            "id": "lzodmsh",
+            "text": "This update your MacOS.  It wasn’t just S1",
+            "score": 10,
+            "author_name": "Scootrz32",
+            "creation_time_utc": "2024-11-30 06:04:36"
+        },
+        {
+            "id": "lzmpq74",
+            "text": "Yes. No config changes of any kind in SentinelOne. That actually threw us off the trail when we were investigating, but later we realized that all affected users had the latest version of the agent running and that the problems only started after if became available. I was doubting it was the cause until the rollbakc fixed the issues for everyone",
+            "score": 3,
+            "author_name": "slyu4ever",
+            "creation_time_utc": "2024-11-29 23:04:53"
+        },
+        {
+            "id": "lzst2n5",
+            "text": "2am pacific Monday 25th",
+            "score": 1,
+            "author_name": "slyu4ever",
+            "creation_time_utc": "2024-12-01 00:53:52"
+        },
+        {
+            "id": "lznjd97",
+            "text": "You had the same problem and no other details?!",
+            "score": 5,
+            "author_name": "simple1689",
+            "creation_time_utc": "2024-11-30 02:20:49"
+        }
+    ]
+}

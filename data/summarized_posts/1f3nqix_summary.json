@@ -1,0 +1,11 @@
+{
+    "is_customer": false,
+    "summary": "The poster is seeking insight into SentinelOne's offerings compared to other remote monitoring and management (RMM) tools, particularly highlighting that ConnectWise offers a more complete version of SentinelOne while competitors like N-able provide a limited version.",
+    "competitor": "N-able",
+    "advantages": [
+        "Visibility"
+    ],
+    "disadvantages": [],
+    "sentiment": "Neutral",
+    "id": "1f3nqix"
+}

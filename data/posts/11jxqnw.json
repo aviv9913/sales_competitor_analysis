@@ -1,0 +1,74 @@
+{
+    "title": "Crowdstrike vs SentinelOne",
+    "text": "Hey guys, we are an MSP with 1000 endpoints currently using webroot. We understand it isn't good enough and nearing the end of our POC evaluation for both sentinelone and crowdstrike. I can say I've had pretty good experiences with both so far but I have seen Crowdstrike be able to detect more things (fileless attacks), seen less false positives and also be a lighter agent on the machines we've tested.  Also Crowdstrike's sales engineer went above and beyond with helping setup best practices etc.\n\nI've done my research and it appears Crowdstrike much more often than not test better in independent evaluations like MITRE and be rated better (gartner). Sentinelone seems still to be mentioned 5/6 times more in these threads. \nI'd like to do my due diligence in questioning CS to make sure I make a good decision. Are most people's decision to not go Crowdstrike due to:\n1. barrier to entry (minimums)\n2. Slightly higher pricing?\n3. Easy consumption model (pax8)?\n\nI'd love to understand anyone else's viewpoint for other reasons!",
+    "score": 55,
+    "creation_time_utc": "2023-03-06 12:36:48",
+    "id": "11jxqnw",
+    "url": "https://www.reddit.com/r/msp/comments/11jxqnw/crowdstrike_vs_sentinelone/",
+    "author_name": "PapaRoachHarambe",
+    "comments": [
+        {
+            "id": "jb73f2q",
+            "text": "SentinelOne in my experience is a notably better product than crowdstrike.\n\nBut honestly if i was in a forced budget id pick huntress+a cheaper av over a very nice AV and no huntress.",
+            "score": 12,
+            "author_name": "AGovtITGuy",
+            "creation_time_utc": "2023-03-06 22:49:25"
+        },
+        {
+            "id": "jb5mdcb",
+            "text": "If you go CS Falcon Complete, you will find you have more time in your day and sleep sounder each night.\n\nThe only caveats are that CS does not 'sync monthly' I believe you have to do an annual and you should probably buy more licenses than you currently need in case you take on more endpoints.",
+            "score": 21,
+            "author_name": "mognats",
+            "creation_time_utc": "2023-03-06 16:46:00"
+        },
+        {
+            "id": "jb7rl11",
+            "text": "I haven't used CS, so can't really compare the two.  However, I can say we've been using S1 with Vigilance and it's absolute top notch.   It's by far the best investment we've made as an MSP.",
+            "score": 6,
+            "author_name": "erelwind",
+            "creation_time_utc": "2023-03-07 01:50:18"
+        },
+        {
+            "id": "jb96sp3",
+            "text": "I have exposure with both. Currently migrating a crowdstrike client to s1. S1 is more sophisticated in my opinion and you can take proactive and reactive measures against suspicious events. When you need to investigate a security event it is so easier to do it with s1. You also get free integrations from their marketplace.",
+            "score": 4,
+            "author_name": "fir3hand",
+            "creation_time_utc": "2023-03-07 11:09:05"
+        },
+        {
+            "id": "jb4xfu0",
+            "text": "We put them head to head and CS gets the edge. S1 is going to be better than most every legacy solution but if you're ok with paying a little premium, CS is currently the best you can get.",
+            "score": 15,
+            "author_name": "Doomstang",
+            "creation_time_utc": "2023-03-06 13:47:18"
+        },
+        {
+            "id": "jb5pjx1",
+            "text": "Is there any true, unbiased published comparison between the two?  I would definitely be interested in seeing that.   \n\nside note:  been a S1 user for years, but always re-evaluating to make sure I am using the most capable solution",
+            "score": 8,
+            "author_name": "Mibiz22",
+            "creation_time_utc": "2023-03-06 17:06:35"
+        },
+        {
+            "id": "jb66gmr",
+            "text": "I found Price to be a big part\n\nIn that CS was close to 2.5x as expensive. When considering that it meant you could chuck in something like Netskope as well and get some more bang for your buck.\n\nUsing netskope you can then usually have your edr, email gateway and web gateway all feeding their telemetry etc to each other\n\nJust makes for better Defense in depth",
+            "score": 3,
+            "author_name": "icedcougar",
+            "creation_time_utc": "2023-03-06 19:01:21"
+        },
+        {
+            "id": "jb59e16",
+            "text": " CrowdStrike is the best go with them",
+            "score": 11,
+            "author_name": "brotherdalmation23",
+            "creation_time_utc": "2023-03-06 15:18:17"
+        },
+        {
+            "id": "jb9514z",
+            "text": "There are many things to consider, when choosing an endpoint protection. First and foremost. remember a tool is just a tool without the people and process.  People are needed 24x7 live eyes on glass to make the real difference. When you buy a NGAV, EDR, and get a live fully staffed SOC you now have an MDR.  Not all and MDRs are created equal. Make sure to do a deep investigation on their response capabilities and remediation.  Do they provide you log retention to help with regulatory compliance? Do they provide configuration assistance, support, and auditing?  Can they give you a consumption based model so you truly only need to buy what you’re using?  What are the lengths of their contracts? Can they do month-to-month with no annual commit.  Are they committed 100% to the channel?  While the technology is important the people and process or more important. Also how many SOCs do you want to work with because MDR is just part of the battle.  Can they provide CDR, NDR, and XDR?  Not all players really do XDR even when they say they do",
+            "score": 3,
+            "author_name": "MichaelCrean-SGI",
+            "creation_time_utc": "2023-03-07 10:45:00"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "is_customer": true,
+    "summary": "The poster discusses issues with co-existing web filtering software (DNSFilter) and SentinelOne, specifically regarding challenges in unquarantining machines after infections due to the interplay between the two services.",
+    "competitor": "DNSFilter",
+    "advantages": [],
+    "disadvantages": [
+        "Security Performance"
+    ],
+    "sentiment": "Negative",
+    "id": "1i91rqa"
+}

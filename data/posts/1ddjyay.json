@@ -1,0 +1,81 @@
+{
+    "title": "CrowdStrike vs SentinelOne",
+    "text": "Good day folks,\n\n  \nI'll be honest, I am at the Pax8 Beyond show and may be getting distracted by the new shiny things in my face, so I was hoping to get some insights from folks that actively use either tool.\n\n  \nWe are currently using Huntress and ConnectSecure but I would like to consolidate those 2 tools down to one and have something closer to a single pane of glass when it comes security.\n\n  \nWhat made you pick one over the other?",
+    "score": 14,
+    "creation_time_utc": "2024-06-11 17:34:05",
+    "id": "1ddjyay",
+    "url": "https://www.reddit.com/r/msp/comments/1ddjyay/crowdstrike_vs_sentinelone/",
+    "author_name": "Tech_Preist",
+    "comments": [
+        {
+            "id": "l85gmrv",
+            "text": "Honestly, any of them are good so long as you have the proper monitoring in place. Crowdstrike has always been considered the golden standard, but you cannot go wrong either way.",
+            "score": 18,
+            "author_name": "Blazedout419",
+            "creation_time_utc": "2024-06-11 18:13:17"
+        },
+        {
+            "id": "l85mwj7",
+            "text": "I like the portal better in crowd strike. Haven't had any issues, we both actively. Some customers have one some have the other",
+            "score": 5,
+            "author_name": "redditistooqueer",
+            "creation_time_utc": "2024-06-11 18:47:40"
+        },
+        {
+            "id": "l8l89ci",
+            "text": "We are still using Huntress and S1 as they place nice together.",
+            "score": 4,
+            "author_name": "lawrencesystems",
+            "creation_time_utc": "2024-06-14 15:02:06"
+        },
+        {
+            "id": "l865hkx",
+            "text": "CS personally speaking. I found that I was fine tuning S1 a lot with them blocking various “threats” which were legitimate software running on laptops.",
+            "score": 9,
+            "author_name": "jazzdrums1979",
+            "creation_time_utc": "2024-06-11 20:30:32"
+        },
+        {
+            "id": "l860umd",
+            "text": "I use both and love both. \nCrowdstrike - lower resource consumption plus more security features like vulnerability management, cis tracking etc.  I think you have to go direct for these extra features though. \nSentinel One - great protection at a good price. Only issue I’ve had is with large virtual environments. The resource usage was too high to justify its use. \n\nFor most MSPs I’d say stick to huntress with defender. You won’t beat their value. Adding mdr to cs or s1 is insanely expensive in comparison",
+            "score": 7,
+            "author_name": "game198",
+            "creation_time_utc": "2024-06-11 20:05:05"
+        },
+        {
+            "id": "l87qj7k",
+            "text": "Love S1. We demoed Crowdstrike and thought it was great, but S1 pricing was way better. Been with them for 3 years. It was the right decision for us.",
+            "score": 3,
+            "author_name": "mrdon515",
+            "creation_time_utc": "2024-06-12 02:47:09"
+        },
+        {
+            "id": "l8a9t2x",
+            "text": "Go with Crowdstrike. Yes S1 is cheaper but in the many years I’ve done IR, I’ve seen S1 fail more times than it ever should have….this includes the times S1 was the MSSP. Crowdstrike consistently blocks malicious activity that S1 doesn’t even notice.",
+            "score": 4,
+            "author_name": "AlfredoVignale",
+            "creation_time_utc": "2024-06-12 15:47:57"
+        },
+        {
+            "id": "l85gtzi",
+            "text": "I’ve been a Sophos shop for a few years with really good results. Just saw the Crowdstrike presentation. I too am curious the feedback as yes #Pax8beyond has some shiny tools.",
+            "score": 6,
+            "author_name": "SmilinJackTN",
+            "creation_time_utc": "2024-06-11 18:14:24"
+        },
+        {
+            "id": "l85cfht",
+            "text": "If you like huntress you could just use defender+ huntress",
+            "score": 9,
+            "author_name": "Joshawa675",
+            "creation_time_utc": "2024-06-11 17:50:17"
+        },
+        {
+            "id": "l85sabr",
+            "text": "We're exploring EDR / Managed EDR right now and it's going to come down to cost first as mostly an SMB shop. Have meetings lined up with both S1 and CS first, then we were going to reach out to Huntress since the sub raves about them and they have a presence on the sub",
+            "score": 3,
+            "author_name": "mistamutt",
+            "creation_time_utc": "2024-06-11 19:17:31"
+        }
+    ]
+}

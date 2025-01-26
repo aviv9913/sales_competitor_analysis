@@ -1,0 +1,74 @@
+{
+    "title": "Security Incident Using Huntress & SentinelOne: What Was Found & What Was Missed",
+    "text": "Security is complicated and I wanted to share some real world insight from an interesting incident. The short version is Huntress found and triggered on something but SentinelOne Vigilance didn't. I made a video on it https://youtu.be/3ekOtkuPM_M \n\n&nbsp;\n\n**I get that some may not want to watch a 17 minute video so here a shorter text version:**\n\nWe have a co-managed client (they have an internal IT team) that only has us running S1 & Huntress on their servers\n\n* We don't monitor their other end points\n* We don't have access to, or manage their firewall\n* They don't have SIEM \n* This is why we can't get any more data about the origination of the file or what process put it there\n\n\n&nbsp;\n\n\n\nHuntress triggered finding a reverse proxy running on one of their servers, SentinelOne (Vigilance version) did not trigger. We asked Huntress for details so we could contact S1 and determine why they did not see this threat and they provided us with several threat reports linked below:\n\n* Here is the [Virustotal for the file](https://www.virustotal.com/gui/file/b455335d64e1633333899c32b49b867272b3d0b2e0653a484c2c8f22ceb3dbd6)\n* Threat report from June 2022 [Deep Instinct](https://www.deepinstinct.com/blog/iranian-threat-actor-continues-to-develop-mass-exploitation-tools) acknowledging use of the FRP in attacks \n* Threat report from May 2022 [With Secure](https://www.withsecure.com/content/dam/with-secure/en/resources/gated/2022_05_31_WS_Threat_Highlight_report_FullHD_May_2022_public.pdf) acknowledging use of the FRP in attacks \n* Florian Roth / [Nextron Yara Rules](https://valhalla.nextron-systems.com/info/rule/HKTL_FRP_Apr20_1) from November 2022 \n\n&nbsp;\n\n\nWe also confirmed using the SentinelOne \"Deep Visibility\" tool (their threat hunting system) that S1 could see the process running on the system and the reverse proxy connections. We did not observe any connections being made to the outside world, just loop back pointing at 3389. But as stated earlier we only have visibility into the servers we monitor, not any of the workstations. \n\n&nbsp;\n\n\nThis evidence was provided to SentinelOne and their response in reference to the file was \"Regarding hash, it is considered riskware and was not deemed fully malicious based on reputation.\" But they also chose to globally blacklist the hash in the S1 cloud. When asked why their Behavioral AI did not pick up on the reverse proxy binding to 127.0.0.1 they responded \"The agent is not designed to monitor or detect traffic on opening of TCP sockets.\" \n\n&nbsp;\n\n\nBoth S1 and Huntress have found common threats in the past and have stopped incidents from happening, I feel this was a less common attack & IOC. My current plan is to continue using both products as part of our defense in depth strategy. I am not here trying to be a decision point for what you should use, I am just here to provide a data point by sharing my real world experience with using these tools.\n\n\n&nbsp;\n\n\n\nMy opinion is still the same as it was before this incident, AI is a great buzzword that get's people excited and get's money thrown at your idea/product but clever people such as those working at Huntress are still very necessary to keep things secure.",
+    "score": 213,
+    "creation_time_utc": "2023-03-02 17:43:31",
+    "id": "11g8vkk",
+    "url": "https://www.reddit.com/r/msp/comments/11g8vkk/security_incident_using_huntress_sentinelone_what/",
+    "author_name": "lawrencesystems",
+    "comments": [
+        {
+            "id": "janlisq",
+            "text": "Was S1 only on the servers and was the riskware on workstations?",
+            "score": 16,
+            "author_name": "Snyper369",
+            "creation_time_utc": "2023-03-02 18:49:02"
+        },
+        {
+            "id": "japq4q0",
+            "text": "\"The agent is not designed to monitor or detect traffic on opening of TCP sockets\"\n\nEmbarrassing when old-gen solutions like McAfee/etc have had such capabilities for a literal decade+ via their host-based intrusion detection/prevention solutions.",
+            "score": 14,
+            "author_name": "PTCruiserGT",
+            "creation_time_utc": "2023-03-03 03:56:16"
+        },
+        {
+            "id": "jane71t",
+            "text": "Would you mind posting this in /r/MSSP ?",
+            "score": 26,
+            "author_name": "DevinSysAdmin",
+            "creation_time_utc": "2023-03-02 17:56:37"
+        },
+        {
+            "id": "jaoz1nq",
+            "text": "This is why doing the thing is so expensive. It takes more than one thing to do the thing and find as many of the bad things as humanly possible.",
+            "score": 8,
+            "author_name": "BarfingMSP",
+            "creation_time_utc": "2023-03-03 00:25:29"
+        },
+        {
+            "id": "jaqmo9x",
+            "text": "Huntress has saved our bacon before and picked up on things other products/services missed. So yeah, we’ll continue to run it alongside our EDR as well.  \n\nMost recently it found a similar-sounding backdoor on 2 servers we were onboarding at a new client.",
+            "score": 6,
+            "author_name": "sdc535",
+            "creation_time_utc": "2023-03-03 10:16:10"
+        },
+        {
+            "id": "jaossxt",
+            "text": "Vigilance can be a strange one and I’m pretty sure this also comes down to vigilance v vigilance pro\n\nBut vigilance seems to be that if the agent doesn’t detect it, they don’t get involved (unless watchtower finds something). It almost feels like the service feels a little like a dashboard cleanup service or for when you’re on weekend and something triggers - but I feel like they don’t do much more.\n\nAn example of such is when triggering a reverse shell, they’ll clean that up but won’t investigate further to see if much else was done, just click roll back on the console and send an email for the customer to look into it. \n\nNot really sure of what to make of the service so far. Good as a backup… but feels a little ‘far from good’ 🤷‍♂️\n\nIt’s also strange that they gather all the data in terms of IP, ports, URL’s and DNS requests… but nothing is actioned on those. You can connect to a known ransomware dropper and they’ll allow it and then action once something hits the disk, rather than detecting the local and doing a TCP reset \n\nDon’t get me wrong - love the product and STAR rules are insanely powerful, just some oddities I’ve noticed",
+            "score": 4,
+            "author_name": "icedcougar",
+            "creation_time_utc": "2023-03-02 23:39:35"
+        },
+        {
+            "id": "jomabqj",
+            "text": "Any idea what EDR Huntress is based on? Since they are an MDR I'm assuming they OEM the core detection tech from another company.",
+            "score": 2,
+            "author_name": "deaflympian",
+            "creation_time_utc": "2023-06-18 19:26:17"
+        },
+        {
+            "id": "jar8cw3",
+            "text": "We use both huntress and S1.  Not too long ago we got an alert from Huntress indicating that there was malicious powershell running on a domain controller.  In looking at the code snippets and googling, there was absolutely no doubt that someone had penetrated the network and was running PS to do lateral exploration, compromise services, etc, etc.\n\nBig client - I was completely freaked out.  \n\nWe called Huntress and, separately, our insurance guys who activated their IRT.  Huntress came back in about an hour and said that S1 was the process running all of those PS scripts.  No, they had no idea why.  When we were done with the Insurance company IRT, they also concluded that S1 was running the scripts.\n\nWe don't buy S1 direct but go through a reseller who was less than eager to get involved -   \nwe only provide tech support\".  I just had to shrug my shoulders and close the ticket.",
+            "score": 4,
+            "author_name": "cokebottle22",
+            "creation_time_utc": "2023-03-03 14:04:54"
+        },
+        {
+            "id": "janmte4",
+            "text": "So FRP is a legit tool ([https://github.com/fatedier/frp](https://github.com/fatedier/frp)) and so is in fact \"riskware\" unless dropped by some other payload as part of a nefarious stack, and so I understand their stance. Was this an initial scan? Sounds like it. What should have been triggered by both is how it got there in the first place and honestly, this should have been found in your initial assessment of the infrastructure before your automated protection started, long before you deployed your AI-based tools. Was it installed or was it through a dropper/exploit? If it was a dropper/exploit why didn't that get triggered? If it was a user then you have other issues. This seems pretty cut and dry to me and I see no fault in the AI or the tools.",
+            "score": 1,
+            "author_name": "BitBurner",
+            "creation_time_utc": "2023-03-02 18:58:32"
+        }
+    ]
+}

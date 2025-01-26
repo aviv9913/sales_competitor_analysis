@@ -1,0 +1,13 @@
+{
+    "is_customer": true,
+    "summary": "The poster discusses their experience using SentinelOne while considering a switch to Kaseya EDR, noting the billing hassle and portal issues with SentinelOne as drawbacks that Kaseya may alleviate.",
+    "competitor": "Kaseya",
+    "advantages": [],
+    "disadvantages": [
+        "Ease of Deployment",
+        "Cost",
+        "User-Friendly Interface"
+    ],
+    "sentiment": "Negative",
+    "id": "1eme18n"
+}

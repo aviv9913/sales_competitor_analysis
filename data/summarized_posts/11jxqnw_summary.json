@@ -1,0 +1,13 @@
+{
+    "is_customer": false,
+    "summary": "The poster, an MSP evaluating SentinelOne and Crowdstrike for 1000 endpoints, shares experiences where Crowdstrike showed better detection, fewer false positives, and stronger sales support. They seek advice to weigh factors like pricing and entry barriers in making a decision.",
+    "competitor": "Crowdstrike",
+    "advantages": [],
+    "disadvantages": [
+        "Security Features",
+        "User-Friendly Interface",
+        "Cost"
+    ],
+    "sentiment": "Neutral",
+    "id": "11jxqnw"
+}

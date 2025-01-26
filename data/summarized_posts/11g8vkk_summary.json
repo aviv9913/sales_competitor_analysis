@@ -1,0 +1,11 @@
+{
+    "is_customer": false,
+    "summary": "The poster shares an incident where Huntress detected a threat that SentinelOne Vigilance did not, discussing their findings and the limitations of the SentinelOne product in this scenario.",
+    "competitor": "Huntress",
+    "advantages": [],
+    "disadvantages": [
+        "Security Performance"
+    ],
+    "sentiment": "Negative",
+    "id": "11g8vkk"
+}

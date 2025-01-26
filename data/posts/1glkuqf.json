@@ -1,0 +1,74 @@
+{
+    "title": "Sentinel One Agent offline",
+    "text": "Hey,\n\nI'm having an issue with the SentinelOne agent. It’s not connecting online, which means I can’t access it through the remote management console. Has anyone encountered this before, or does anyone have suggestions on how to troubleshoot it?\n\nThanks",
+    "score": 3,
+    "creation_time_utc": "2024-11-07 07:11:39",
+    "id": "1glkuqf",
+    "url": "https://www.reddit.com/r/msp/comments/1glkuqf/sentinel_one_agent_offline/",
+    "author_name": "Tieschn",
+    "comments": [
+        {
+            "id": "lvva9xh",
+            "text": "We had this happen at a bank. This specific endpoint would show signs of either going down all altogether, or S1 just going offline. Just like what you said, you couldn't access it. What was worse is that the system it was on was very, very old, and wouldn't want to come back on when restarted (the bank didn't want to pay to have it fixed until it was basically dead). \n\nWe ended up having to remove it and reinstall. MSPinTheUK has the right idea.",
+            "score": 1,
+            "author_name": "Ok_Vermicelli8618",
+            "creation_time_utc": "2024-11-07 08:52:17"
+        },
+        {
+            "id": "lvvnzut",
+            "text": "Those are the good ones, wait until you figure out all the machines that just disappear from the console but still have the software running!",
+            "score": 1,
+            "author_name": "ibecirious",
+            "creation_time_utc": "2024-11-07 11:16:48"
+        },
+        {
+            "id": "lvvq4sk",
+            "text": "You really need to be able to run SentinelCtl to troubleshoot this, you can get a stack of good info out of it -- one of the many reasons we love ScreenConnect's backstage, though I'd suspect most RMM tools can do the same or something close enough.\n\nSentinelCtl bind -k \"*agent pass phrase*\" *site\\_token* \\-- is our latest favourite fix (with a similar reload command after).",
+            "score": 1,
+            "author_name": "jase-_-",
+            "creation_time_utc": "2024-11-07 11:36:03"
+        },
+        {
+            "id": "lvx8ycr",
+            "text": "I had one agent that would install but never connect to the console. It also doesn't send some data to our RMM. \n\nFound out WMI had broken, this article will guide you through how to fix that issue:\nhttps://support.hawkridgesys.com/hc/en-us/articles/24793203315469-Application-Exception-Invalid-Class-when-using-eDrawings-or-PDM-Preview\n(It's referencing a specific program unrelated to S1, but the fix works)",
+            "score": 1,
+            "author_name": "meesterdg",
+            "creation_time_utc": "2024-11-07 16:52:46"
+        },
+        {
+            "id": "lw0nbt1",
+            "text": "SentinelOne is vulnerable to WFP modifications which will take it \"offline\" and render communication useless. Generally done as a precursor to a much larger attack and to give them time to bypass/laterally move through the network.\n\nDoes the machine still have no problem with internet access? If so, might want to research if any changes have been made to WFP on the machine.",
+            "score": 1,
+            "author_name": "capnbypass",
+            "creation_time_utc": "2024-11-08 03:12:08"
+        },
+        {
+            "id": "lwvwida",
+            "text": "i found the solution..\n\n[Application Exception: Invalid Class – when using eDrawings or PDM Preview – Hawk Ridge Systems](https://support.hawkridgesys.com/hc/en-us/articles/24793203315469-Application-Exception-Invalid-Class-when-using-eDrawings-or-PDM-Preview)",
+            "score": 1,
+            "author_name": "Tieschn",
+            "creation_time_utc": "2024-11-13 07:48:11"
+        },
+        {
+            "id": "lvv3xbv",
+            "text": "okay thank you, i will try it.",
+            "score": 1,
+            "author_name": "Tieschn",
+            "creation_time_utc": "2024-11-07 07:44:14"
+        },
+        {
+            "id": "lvvqx5e",
+            "text": "It’s a windows 11 issue that causes this. It stops reporting to the console because one of the three services aren’t running. If you put a new version exe on it and run it through command prompt it’ll work again. I’ve written instructions for this. If anyone needs them, let me know.",
+            "score": 1,
+            "author_name": "Forsythe36",
+            "creation_time_utc": "2024-11-07 11:42:50"
+        },
+        {
+            "id": "lvvr0o8",
+            "text": "They’ve put the cleaner in the executable. Reboot into safe mode, run the cleaner, boot into normal mode, reinstall the agent.",
+            "score": 2,
+            "author_name": "Forsythe36",
+            "creation_time_utc": "2024-11-07 11:43:39"
+        }
+    ]
+}

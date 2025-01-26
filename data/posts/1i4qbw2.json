@@ -1,0 +1,81 @@
+{
+    "title": "SentinelOne miss (again)",
+    "text": "Update : S1 support confirmed the delay. Said their SMTP service was stuck. No real way to know until it happens. \n\nSecond time in about a month I’m having a major issue with S1. First time was a completely missed threat.\n\nSecond issue now. Malware detected on a machine yesterday. Just now I get the email alert. Over 24 hours later. what gives? Anyone else been having issues lately? What else is out there “better”? I always thought we were using the best of the best here. Guess I was wrong. \n\nThankfully it was caught and remediated. But 24 hour delay on the alert….?\n\nPer the email alert, detection and remediation happened on Friday. But console just sent the alert about 15 min ago. ",
+    "score": 29,
+    "creation_time_utc": "2025-01-19 04:31:11",
+    "id": "1i4qbw2",
+    "url": "https://www.reddit.com/r/msp/comments/1i4qbw2/sentinelone_miss_again/",
+    "author_name": "Clean_Background_318",
+    "comments": [
+        {
+            "id": "m7xnknz",
+            "text": "Maybe ask their support ?\n\nnot a fan of s1 here but this is probably not the place to ask",
+            "score": 18,
+            "author_name": "CyberHouseChicago",
+            "creation_time_utc": "2025-01-19 05:17:36"
+        },
+        {
+            "id": "m7xrxp3",
+            "text": "I had similar results with S1. Switched to Defender XDR with Huntress and it's been much better.",
+            "score": 19,
+            "author_name": "Rivitir",
+            "creation_time_utc": "2025-01-19 05:46:46"
+        },
+        {
+            "id": "m7zg2yq",
+            "text": "Consider security in layers, thinking one security solution is going to get everything is naïve and potentially catastrophic for you",
+            "score": 9,
+            "author_name": "c2seedy",
+            "creation_time_utc": "2025-01-19 14:27:24"
+        },
+        {
+            "id": "m80k3wg",
+            "text": "We had the same issue multiple times. That's why we decided to switch to Threatlocker",
+            "score": 4,
+            "author_name": "ginohs",
+            "creation_time_utc": "2025-01-19 17:44:33"
+        },
+        {
+            "id": "m80c0bw",
+            "text": "Because they suck Huntress is what you need!!!",
+            "score": 7,
+            "author_name": "bloodpearl",
+            "creation_time_utc": "2025-01-19 17:06:32"
+        },
+        {
+            "id": "m803dmw",
+            "text": "We have been having similar issues with notifications... I have Pagerduty and my inbox both on the notification list, 50% of the time I either get no email at all or it's only delivered to one of the two email addresses. \n\nI haven't bothered with support yet, I feel like I'm seeing more and more of these S1 threads, we're looking into Huntress anyways..",
+            "score": 3,
+            "author_name": "Proper_Watercress_78",
+            "creation_time_utc": "2025-01-19 16:26:07"
+        },
+        {
+            "id": "m7xvs6s",
+            "text": "Free defender is just basic av. Better than nothing but you really want defender xdr as it's a true xdr. It's quite impressive what Microsoft has don't with it. And if you have BP for your clients you can centrally monitor through lighthouse.\n\nLast I saw Huntress showed that defender is responsible for 30% of it's detection.",
+            "score": 2,
+            "author_name": "Rivitir",
+            "creation_time_utc": "2025-01-19 06:15:16"
+        },
+        {
+            "id": "m7yualf",
+            "text": "I’ve been experiencing the email alert delay with S1 for a couple of months now, as well.  Sometimes it’s days later - not hours.  We have Vigilance, though, who’s on top of it instantly, so it has been less of an issue for us.  We’ll get a call if it’s something that isn’t handled automatically for us by them.",
+            "score": 2,
+            "author_name": "BanRanchTalk",
+            "creation_time_utc": "2025-01-19 11:47:48"
+        },
+        {
+            "id": "m7zeipg",
+            "text": "Detection.\nI've had things that defender caught that huntress had no clue of. This is because as of now huntress has no view of network traffic. Defender sees all of that.",
+            "score": 2,
+            "author_name": "Rivitir",
+            "creation_time_utc": "2025-01-19 14:18:13"
+        },
+        {
+            "id": "m85bncr",
+            "text": "It's what you signed up for, dude. \n\nOn the flip side, when I was at CrowdStrike, we'd see emails from Overwatch summarily ignored. When I first started, it was fascinating to see the emails going out, knowing where that action fit in the response efforts. But then I started to see things like, \"...as stated in the previous emails...\", and noticed that folks signed up for something without really understanding it. \n\nI get it. In today's day and age. we \\*expect\\* things to just work, without really grasping that those services run over infrastructure and devices created and managed by humans.",
+            "score": 2,
+            "author_name": "keydet89",
+            "creation_time_utc": "2025-01-20 11:58:24"
+        }
+    ]
+}
