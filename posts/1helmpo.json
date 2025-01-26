@@ -1,0 +1,81 @@
+{
+    "title": "SentinelOne Missed Threats",
+    "text": "I just had an incident where I just signed up a client with Blackpoint Cyber. We have managed this client for a few months now (no Blackpoint, just SentinelOne/DNSFilter/Basic security setup) When we installed SentinelOne, all scans came back clean. Shortly after getting Blackpoint set up, we get a call from their SOC that one of their PCs is infected with an AsyncRAT Trojan, which has 9 confirmed malicious file hashes on the PC, 72 rogue PowerShell connections to known malicious IPs, and 6 bogus windows scheduled tasks kicking off to queue up the PowerShell connections. \n\n  \nIm a little baffled that SentinelOne didn't see all the open connections and kick off an alert. Actually having a real \"WTF\" moment. Per Blackpoint, the files have been on the machine for about 6 months, so since before we signed them as a client. \n\n  \nAnyone that has a little more expertise than I do care to chime in?.... I put a lot of trust in S1 and feeling a little shaky about it now. Highly debating on just going to windows defender and hooking up Blackpoint on all endpoints as a CYA now.\n\nUpdate : to make things worse, we get S1 through Pax8. We are trying to get some support on this issue directly with S1 to figure out what went wrong and they are basically refusing. I get that support is supposed to go through them first, but this is on another level than normal support. ",
+    "score": 55,
+    "creation_time_utc": "2024-12-15 05:15:06",
+    "id": "1helmpo",
+    "url": "https://www.reddit.com/r/msp/comments/1helmpo/sentinelone_missed_threats/",
+    "author_name": "Clean_Background_318",
+    "comments": [
+        {
+            "id": "m2bszid",
+            "text": "Wow, I find it surprising that yet another EDR false-negative incident has sparked so much discussion—and that so many were caught off guard by it. I work in IR, forensics, and red team exercises for large enterprises, and I’ve long since come to expect what many still seem to overlook:\n\n1. **All EDRs miss things**—sometimes even the simplest, easiest-to-detect threats. Anyone who tests EDRs and attempts evasion tactics will quickly discover it’s not as difficult as it should be.\n2. **This applies to all security tools**, not just EDRs. IDS/IPS, WAFs, sandboxes, SIEM detections, and more are all limited by what they’ve been tested against. On top of that, once humans start making adjustments—like exclusions, overly permissive configurations, or dismissing alerts as “probably nothing”—these systems become even easier to bypass.\n3. **Layered defense is essential.** However, keep in mind that MDR isn’t a separate defense layer—it’s someone analyzing the output from your existing security stack. That said, MDR can be invaluable if you don’t have the resources for an in-house SOC.\n4. **Invest in network visibility.** Many organizations delay implementing robust network monitoring because of cost, complexity, or concerns about false positives. But it’s 2024, and some vendors have made these tools more accessible and less noisy. Network monitoring can be your best friend in detecting critical post-breach activities like internal reconnaissance, lateral movement, and data exfiltration.\n5. **I’m risking controversy here, but I’ll say it:** I would personally avoid Defender as an EDR. It feels counterintuitive to rely on a security solution from the same vendor responsible for many of the vulnerabilities that put networks at risk in the first place. It’s like buying medicine from the person who made you sick.\n6. **Test your security stack.** Penetration testing, red team exercises, purple team drills, or even basic EDR evasion testing can provide invaluable insights into your organization’s visibility, configuration, and detection gaps. In my experience, this is the best way to prepare for real-world attackers.\n7. **“This vendor” vs. “that vendor” debates aren’t particularly useful.** Products evolve. A tool that’s excellent today might fall behind tomorrow, but people will continue praising it based on past performance. Ultimately, competition ensures the top vendors quickly match each other on features and price. What matters far more than the specific product is your architecture, attention to detail, and regular testing.\n\nI hope this advice resonates. Good luck with your efforts, whatever they may be!",
+            "score": 16,
+            "author_name": "Haunting_Ganache_850",
+            "creation_time_utc": "2024-12-16 13:46:12"
+        },
+        {
+            "id": "m25zizo",
+            "text": "We have been seeing more types of malware incorporate EDR evasions for specific EDR vendors. It may be the case that this version of AsyncRAT employed an evasion or unloader for S1 that Didn't effect the signals for Blackpoint.",
+            "score": 9,
+            "author_name": "greensparklers",
+            "creation_time_utc": "2024-12-15 13:41:36"
+        },
+        {
+            "id": "m24q1mr",
+            "text": "This is why you have layers of defense.\n\nI'm not defending S1, but this same post can be written about crowdstrike, ms edr etc.\n\nNo one edr is foolproof, s1 is still one of the better edrs out there. \n\nCombined with other layers, such as an mdr is the way to go.",
+            "score": 27,
+            "author_name": "hxcjosh23",
+            "creation_time_utc": "2024-12-15 05:54:19"
+        },
+        {
+            "id": "m266134",
+            "text": "Just be happy you're not using Datto EDR/AV, it misses threats but flags all of our IT tools (including Datto RMM this week) as malware.",
+            "score": 13,
+            "author_name": "Glass_Call982",
+            "creation_time_utc": "2024-12-15 14:28:45"
+        },
+        {
+            "id": "m2548id",
+            "text": "As others said, same could be about other EDRs. MDR like services like blackpoint and huntress looks at totally different things and would most likely see things EDR misses.  Take for example living off the land tools  - a blind spot for most if not alll EDR. \n\nLayers - EDR + MDR + endpoint hardening controls on all devices \n\nFYI - S1 vigilance MDR only looks at threats S1 detects if I recall they don’t do any proactive threat hunting.",
+            "score": 11,
+            "author_name": "k3net",
+            "creation_time_utc": "2024-12-15 08:19:16"
+        },
+        {
+            "id": "m24nw74",
+            "text": "Are you using S1 with black point or did you change edr?  If they found it then the edr found it.  Last I checked black point was bring your own edr which is why I'm asking.   S1 takes a lot of tuning and you can still miss stuff.",
+            "score": 6,
+            "author_name": "perk3131",
+            "creation_time_utc": "2024-12-15 05:35:34"
+        },
+        {
+            "id": "m263c18",
+            "text": "Which level of S1? I work in IR and have seen S1 Core and S1 Control miss super basic stuff. S1 Complete is much better.",
+            "score": 5,
+            "author_name": "Staas",
+            "creation_time_utc": "2024-12-15 14:09:39"
+        },
+        {
+            "id": "m24mf79",
+            "text": "We removed S1 and went with Defender + Huntress as well.",
+            "score": 22,
+            "author_name": "Curtdog090716",
+            "creation_time_utc": "2024-12-15 05:22:58"
+        },
+        {
+            "id": "m24qqs9",
+            "text": "I switched from S1 to defender for business and huntress a while back. I did so because I tested enabling defender with S1 installed and defender found things on roughly 25% of my endpoints that S1 was completely oblivious to.\n\nI run defender for business because it will find a lot more than just basic defender. Big difference between the two.",
+            "score": 8,
+            "author_name": "Rivitir",
+            "creation_time_utc": "2024-12-15 06:00:34"
+        },
+        {
+            "id": "m24q0n3",
+            "text": "Was S1 installed on a clean machine or one in operation for a while?",
+            "score": 3,
+            "author_name": "Justepic1",
+            "creation_time_utc": "2024-12-15 05:54:04"
+        }
+    ]
+}

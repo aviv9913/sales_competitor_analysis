@@ -1,0 +1,81 @@
+{
+    "title": "Why so much love for Sentinel One?",
+    "text": "I have seen a lot of love on here for Sentinel One. I am just wondering why. Is it comparative to older AV like webroot, is it due to the cost per endpoint, the catches and mitigation of threats? I have in the past had Sentinel One fail multiple times to catch lateral movements and stop them (three to be exact.) Has anyone else had similar issues or is this an outlier case? I guess I just don't understand why there isn't more diversity in the MSP sector for Next-Gen AV solutions.",
+    "score": 3,
+    "creation_time_utc": "2023-01-06 16:02:18",
+    "id": "104xsu8",
+    "url": "https://www.reddit.com/r/msp/comments/104xsu8/why_so_much_love_for_sentinel_one/",
+    "author_name": "Random_BSOD",
+    "comments": [
+        {
+            "id": "j38bj9y",
+            "text": "I wish we'd hear more from people whose EDR stopped zero-day malware in its tracks.\n\nThe marketing and fluff is just that until the front desk lady opens a zero-day malware attachment while she has full modify rights to the company shares.",
+            "score": 11,
+            "author_name": "RestartRebootRetire",
+            "creation_time_utc": "2023-01-06 19:01:20"
+        },
+        {
+            "id": "j381nmz",
+            "text": "Webroot isn't even in the same league as something to one or other solutions. It's just not a competitive product anymore and the team at webroot is not really doing a lot to change that. Full disclosure we are a S1 shop and we use other products within our stack as well because we believe it a multi-layered holistic approach to security.\n\nThe reason we like S1 so much is because it is an extremely powerful tool that can give an incredible amount of detail and insight into problems, but only if you can manage it. If you just throw sentinel one on a system and expect it to work it'll be incredibly disappointing and you are much better off with something like Huntress which we also use. S1 really shines when you have a fully managed SOC and incident response team either in-house or contracted that can utilize all of its features properly. We have it integrated with our SOAR/SIEM solution and have automation set up to prevent an infected endpoint from eating in lateral movement or escalation. For example if one of our systems receives a flag from S1 all MS accounts associated with that system are put in lockdown and their data access and privileges are restricted heavily. The endpoint is also isolated and taken off the network. S1 has great integrations with things like azure ad and furious other solutions that could be used to automate response.\n\nAgain the tool is only as useful as the people who use it. If you throw it on everything and then ignore it it's just as useless as if you installed free AV and had it all update. Put it in the hands of a skilled user though and could be one of your organizations biggest assets.",
+            "score": 16,
+            "author_name": "blindgaming",
+            "creation_time_utc": "2023-01-06 18:01:40"
+        },
+        {
+            "id": "j37y2n2",
+            "text": "My experience with S1 has been poor.  It really slows machines down and the false positive rate was really high.  I don't understand the love for it either.",
+            "score": 14,
+            "author_name": "AP_ILS",
+            "creation_time_utc": "2023-01-06 17:40:40"
+        },
+        {
+            "id": "j38yt0u",
+            "text": "We had some issues you described above when we implemented S1, but found out that the person on or team who was in charge of the setup and monitoring of it had made a lot of misconfiguring mistakes. We worked with their support with a different member of our team ( more security focused) and corrected the issues, and have had no complaints since.",
+            "score": 3,
+            "author_name": "LetMeBangBro",
+            "creation_time_utc": "2023-01-06 21:23:30"
+        },
+        {
+            "id": "j37r9zd",
+            "text": "I feel there is a lot of diversity. Carbon Black, S1, Sophos XDR/MDR, slightly different offerings like huntress managing Defender, then the other EDR players out there.\n\nWhat lateral movement didn't it catch? Generally that's more of a network threat/server catch than end user endpoint catch?",
+            "score": 3,
+            "author_name": "roll_for_initiative_",
+            "creation_time_utc": "2023-01-06 17:00:27"
+        },
+        {
+            "id": "jzespa8",
+            "text": "The reporting is awful. Everything is a million emails and NONE of them say the client name.",
+            "score": 2,
+            "author_name": "Amazing-Team8687",
+            "creation_time_utc": "2023-09-06 17:56:00"
+        },
+        {
+            "id": "kfzxnqf",
+            "text": "Price is far and away Sentinel One's biggest advantage. They use AI instead of human threat hunters, so that drives down cost. However, as stated on another thread: We dumped SentinelOne for Crowdstrike and never looked back. The number of issues caused by S1's bloated agent are more numerous than you will count. Didn't even realise what a massive difference dumping it would make on enduser performance until we did. Crowdstrike, by contrast, has a lightweight client, fewer false positives and I don't spend an hour a week writing exceptions which someone at S1 should have already done.",
+            "score": 2,
+            "author_name": "Stop_the_Genocide",
+            "creation_time_utc": "2024-01-02 17:02:28"
+        },
+        {
+            "id": "j37iolq",
+            "text": "It is comparable to modern EDR like Crowdstrike and other products.\n\nWhat did support have to say about that?  Could have been a misconfiguration issue.",
+            "score": 1,
+            "author_name": "CPAtech",
+            "creation_time_utc": "2023-01-06 16:07:53"
+        },
+        {
+            "id": "j39zrl8",
+            "text": ">ail multiple times to catch lateral movements \n\nThis can mean a lot of things, but \"lateral movement\" often means \"an attacker with access to one server literally has permissions as admin on another server\", and the only thing that's going to stop \\\\server\\c$ being abused is network segmentation. There's no endpoint product on the market that will address the common case here.",
+            "score": 1,
+            "author_name": "disclosure5",
+            "creation_time_utc": "2023-01-07 01:33:32"
+        },
+        {
+            "id": "j3p3w8w",
+            "text": "It hasn’t been flawless but really good. It’s light and integrates with a soc which integrates with our connectwise",
+            "score": 1,
+            "author_name": "bettereverydamday",
+            "creation_time_utc": "2023-01-10 02:26:56"
+        }
+    ]
+}

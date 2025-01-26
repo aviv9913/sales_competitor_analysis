@@ -1,0 +1,81 @@
+{
+    "title": "Huntress or SentinelOne",
+    "text": "What's the better stack. Huntress paired with Windows Defender or SentinelOne Complete. The Huntress option would cost $2.60 more per endpoint. Is that worth it to get a SOC? Thanks for your opinions.",
+    "score": 22,
+    "creation_time_utc": "2025-01-10 17:59:15",
+    "id": "1hyah6u",
+    "url": "https://www.reddit.com/r/msp/comments/1hyah6u/huntress_or_sentinelone/",
+    "author_name": "bandor23",
+    "comments": [
+        {
+            "id": "m6g5gwy",
+            "text": "We use both S1 and huntress on every endpoint. \n\nHuntress strictly as an IDS and S1 for EDR. \n\nFor example, Huntress recently opened a ticket with us for a customer running a screenconnect that isn’t the normal screenconnect that we use. \n\nThey said it was sus and we should look. End user received a call from someone overseas and was trying to let the person control their computer but huntress endpoint isolation stopped it. \n\nWe’ve had things S1 blocked and huntress didn’t even see. \n\nUse both.",
+            "score": 38,
+            "author_name": "guiltykeyboard",
+            "creation_time_utc": "2025-01-10 18:57:53"
+        },
+        {
+            "id": "m6gmoka",
+            "text": "Huntress just saved our ass again. Twice now had footholds stopped in <15mins as they started doing recon for ransomware attacks",
+            "score": 30,
+            "author_name": "2manybrokenbmws",
+            "creation_time_utc": "2025-01-10 20:21:42"
+        },
+        {
+            "id": "m6gndcd",
+            "text": "If you could only pick 1 and you are primarily supporting small-to-mid market customers with minimal compliance requirements: Huntress all day.\n\nHuntress is building their solution around detecting and responding to SMB risks.",
+            "score": 20,
+            "author_name": "variableindex",
+            "creation_time_utc": "2025-01-10 20:25:05"
+        },
+        {
+            "id": "m6gleg9",
+            "text": "I like Huntress with Defender, but definitely see the argument for running both.\n\nSentinelOne feels clunky and the alerts are sometimes a bit difficult to decipher, Huntress has been, simple, effective, and paid for itself many times over.",
+            "score": 14,
+            "author_name": "Jetboy01",
+            "creation_time_utc": "2025-01-10 20:15:25"
+        },
+        {
+            "id": "m6fy45h",
+            "text": "Huntress has a bigger focus on MSPs than SentinelOne. You’ll have a better experience working with them.",
+            "score": 42,
+            "author_name": "CFult0n",
+            "creation_time_utc": "2025-01-10 18:22:43"
+        },
+        {
+            "id": "m6h8epc",
+            "text": "Is that SentinelOne Complete with Vigilance? The main difference is that SentinelOne Complete by itself won’t be monitored by a SOC whereas Huntress is always a fully managed solution.",
+            "score": 8,
+            "author_name": "chrisbisnett",
+            "creation_time_utc": "2025-01-10 22:10:11"
+        },
+        {
+            "id": "m6hpizc",
+            "text": "You need a S1 trained SOC to make it worth it. \n\nWe use both.",
+            "score": 7,
+            "author_name": "Justepic1",
+            "creation_time_utc": "2025-01-10 23:43:35"
+        },
+        {
+            "id": "m6ih9cc",
+            "text": "In what world is Huntress more expensive than SO?",
+            "score": 7,
+            "author_name": "Amorhan",
+            "creation_time_utc": "2025-01-11 02:21:21"
+        },
+        {
+            "id": "m6minqu",
+            "text": "I would take either over the shit show that is Datto EDR and Rocketcyber. We had a client where someone opened a malicious file and they were doing recon for ransomware. Of course we did not get notified until the fucking Canadian center for cyber security contacted the client because they noticed the communications...",
+            "score": 7,
+            "author_name": "MortadellaKing",
+            "creation_time_utc": "2025-01-11 19:47:52"
+        },
+        {
+            "id": "m6g01m7",
+            "text": "We moved off sentinel one after they let a 0day get thru and blamed us because we had the later non GA version\n\nBeen with huntress for awhile.. onboarded a client a few weeks ago ( well acquisition) soon as we rolled huntress it picked up a known screen connect instance to a malware gang and isolated the system. Yah s1 would never give me that",
+            "score": 25,
+            "author_name": "ben_zachary",
+            "creation_time_utc": "2025-01-10 18:31:58"
+        }
+    ]
+}

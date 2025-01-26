@@ -1,0 +1,81 @@
+{
+    "title": "DNSFilter with SentinelOne",
+    "text": "I currently use webroot-based web filtering through our N-Sight RMM. It works fine, but there is an issue with co-existing with SentinelOne. Specifically, when the web filtering software is installed on an endpoint, SentinelOne has difficulty unquarantining a machine from network quarantine after an infection. A reboot is required which isn't a huge deal, but is a shot-in-the dark PITA that relies on the S1 service starting before the webfilter service. This seems to be an issue with S1 and DNS-based web filters in general from what I can see on the forums, etc. So, I am considering moving to something different. \n\nDoes anyone else run both DNSFilter and SentinelOne on their stack, have experience with the network quarantine feature of S1, and can verify that it doesn't have an issue? ",
+    "score": 6,
+    "creation_time_utc": "2025-01-24 18:06:30",
+    "id": "1i91rqa",
+    "url": "https://www.reddit.com/r/msp/comments/1i91rqa/dnsfilter_with_sentinelone/",
+    "author_name": "schwags",
+    "comments": [
+        {
+            "id": "m8z7rgo",
+            "text": "DNSFilter here! We have many customers who run SentinelOne alongside our service without issues. We have a 14-day free trial if you'd like to try it for yourself on a test server.",
+            "score": 7,
+            "author_name": "dnsfilter",
+            "creation_time_utc": "2025-01-24 20:55:44"
+        },
+        {
+            "id": "m908eny",
+            "text": "Does S1 have a way to add your own allowed domains to the isolation functionality? We switch from Webroot to Zorus for DNS filtering, and Zorus does have an isolation function, which restricts DNS access to anything except for Zorus. Since it also allows for custom domains, we can add in all our RMM domains as well so we can still access the device from the RMM in case it gets isolated by Zorus.\n\nS1 is a different process entirely and I'm not familiar with it, but it will need some sort of custom allowed domains to be supported so your various agents don't get cut off from your support portals. Webroot uses an internal DNS server and modifies the configured DNS to point to the internal server. I'm guessing that somehow S1 blocks this process or blocks the DNS queries that webroot sends so if they start up in the wrong order, DNS functionality no longer works. You could always configure the Webroot DNS service to delayed-auto. This would push it to the later rounds of startup and would allow S1 to start first.",
+            "score": 1,
+            "author_name": "netmc",
+            "creation_time_utc": "2025-01-24 23:58:23"
+        },
+        {
+            "id": "m9412ho",
+            "text": "Founder of ScoutDNS here. I have not heard of this issue within our customers that run S1. It could be our fail-open helps without any intervention, but we are also a little unique in this space in that you can remotely disable/enable our DNS agent from the ScoutDNS UI which releases the loopback address and sets DNS back to the current DHCP assigned DNS IPs.\n\nIf you are interested, I would love to see how this process works with our agent and S1 quarantine. Feel free to send me a message.",
+            "score": 1,
+            "author_name": "dfwtim",
+            "creation_time_utc": "2025-01-25 16:28:58"
+        },
+        {
+            "id": "m96g4ct",
+            "text": "What is it with people and using webroot?",
+            "score": 1,
+            "author_name": "halakar",
+            "creation_time_utc": "2025-01-25 23:46:33"
+        },
+        {
+            "id": "m98grfl",
+            "text": "S1 + DNSFilter combo here.\n\nNo issues.",
+            "score": 1,
+            "author_name": "Mediocre_Tadpole_",
+            "creation_time_utc": "2025-01-26 07:58:57"
+        },
+        {
+            "id": "m97ozjj",
+            "text": "I also use SentinelOne and Webroot DNS at scale but I've not experienced that specific issue. I am moving away from Webroot DNS nonetheless. I've also used DNSFilter in the past but prefer DefensX for DNS protection. It operates using a kernel-mode driver and doesn't touch the NIC or use the loopback approach. You can also safely install it on servers that have AD and DNS roles installed which can't be said for most other DNS protection products. As you're evaluating your options, I'd encourage you to have a look at DefensX as well. Cheers and good luck.",
+            "score": 0,
+            "author_name": "Edgeforce",
+            "creation_time_utc": "2025-01-26 04:09:17"
+        },
+        {
+            "id": "m8zmdrs",
+            "text": "Thanks for the reply but I'm specifically looking for people who have used the network quarantine function of sentinel one, and can tell me from experience that you can unquarantine a machine without reboot.\n\nI may take some time to give a trial a shot at some point, but that's like a whole day affair for me and I ain't got time for that right now!",
+            "score": 2,
+            "author_name": "schwags",
+            "creation_time_utc": "2025-01-24 22:04:42"
+        },
+        {
+            "id": "m90jezm",
+            "text": "That's kind of what led to all this actually. I've been trying to get network quarantine to work with auto elevate. Obviously I can't roll out auto elevate until I can use it when the computer is under network quarantine. Kind of hard to investigate or remove a virus when you can't have admin! \n\nThe whitelisting function of the network quarantine is half baked at best. It allows me to whitelist an EXE, but doesn't seem to actually do anything. The only thing I've gotten to work is IP whitelisting, but it does not accept DNS names. So pretty useless with auto elevate considering they use a giant chunk of AWS.\n\nDuring the process of troubleshooting all of that I figured out that our DNS filter was causing a severe delay in reconnecting to the network. Got me thinking it might be time to try something else.",
+            "score": 1,
+            "author_name": "schwags",
+            "creation_time_utc": "2025-01-25 00:58:56"
+        },
+        {
+            "id": "m96suim",
+            "text": "It's not branded webroot anywhere on the top, it's just the web filter that's available through my RMM. I called it webroot because when we submit a false positive the submission page is branded webroot so I'm betting they get their definitions from them.",
+            "score": 1,
+            "author_name": "schwags",
+            "creation_time_utc": "2025-01-26 00:57:47"
+        },
+        {
+            "id": "m91ekoh",
+            "text": "We run both, we use network quarantine, it all works fine.",
+            "score": 3,
+            "author_name": "MyMonitorHasAVirus",
+            "creation_time_utc": "2025-01-25 04:06:01"
+        }
+    ]
+}

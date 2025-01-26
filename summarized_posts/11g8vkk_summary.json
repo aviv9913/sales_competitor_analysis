@@ -1,0 +1,11 @@
+{
+    "is_customer": true,
+    "summary": "The poster shares insights from a security incident where Huntress detected a threat that SentinelOne Vigilance did not. They detail their experience with both tools and emphasize the importance of using them together for added security.",
+    "competitor": "Huntress",
+    "advantages": [],
+    "disadvantages": [
+        "Security Performance"
+    ],
+    "sentiment": "Neutral",
+    "id": "11g8vkk"
+}

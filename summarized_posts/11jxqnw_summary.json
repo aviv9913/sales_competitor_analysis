@@ -1,0 +1,12 @@
+{
+    "is_customer": false,
+    "summary": "The poster, an MSP evaluating SentinelOne and Crowdstrike for their 1000 endpoints, shares their findings that Crowdstrike seems to have better detection capabilities and lighter agent impact, while expressing a desire to understand why other users might be hesitant to choose Crowdstrike.",
+    "competitor": "Crowdstrike",
+    "advantages": [],
+    "disadvantages": [
+        "Security Performance",
+        "Cost"
+    ],
+    "sentiment": "Negative",
+    "id": "11jxqnw"
+}

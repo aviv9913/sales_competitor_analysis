@@ -1,0 +1,7 @@
+openai
+praw
+pandas
+ipykernel
+python-dotenv
+pydantic
+tabulate

@@ -1,0 +1,11 @@
+{
+    "is_customer": false,
+    "summary": "The poster questions the widespread appreciation for SentinelOne, citing personal experiences of its failure to catch lateral movements, while also comparing it to older antivirus solutions like Webroot.",
+    "competitor": "Webroot",
+    "advantages": [],
+    "disadvantages": [
+        "Security Performance"
+    ],
+    "sentiment": "Negative",
+    "id": "104xsu8"
+}

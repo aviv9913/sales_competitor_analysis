@@ -1,0 +1,11 @@
+{
+    "is_customer": false,
+    "summary": "The poster discusses the popularity of Crowdstrike as the leading choice for MDR/XDR protection in large enterprises, while noting SentinelOne's strong position in SMBs and questioning if it can compete effectively with Crowdstrike in the future.",
+    "competitor": "Crowdstrike",
+    "advantages": [
+        "Visibility"
+    ],
+    "disadvantages": [],
+    "sentiment": "Neutral",
+    "id": "1cpz1wh"
+}

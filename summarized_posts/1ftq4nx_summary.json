@@ -1,0 +1,11 @@
+{
+    "is_customer": true,
+    "summary": "The poster expresses skepticism about SentinelOne's Vulnerability Management feature, noting that it returned outdated CVEs for a fully updated system, which they find adds unnecessary noise.",
+    "competitor": "",
+    "advantages": [],
+    "disadvantages": [
+        "Visibility"
+    ],
+    "sentiment": "Negative",
+    "id": "1ftq4nx"
+}

@@ -1,0 +1,81 @@
+{
+    "title": "Sentinel One and Atera Nuked",
+    "text": "Pax 8 Sentinel One Consoles are down and it has killed Atera RMM instances. Affecting all of our clients. Pax8 says it has a Priority One ticket in and are aware!",
+    "score": 54,
+    "creation_time_utc": "2024-09-13 16:24:33",
+    "id": "1ffyw6m",
+    "url": "https://www.reddit.com/r/msp/comments/1ffyw6m/sentinel_one_and_atera_nuked/",
+    "author_name": "chrisnlbc",
+    "comments": [
+        {
+            "id": "lmz0do5",
+            "text": "I told them not to push updates before the weekend begins 😅",
+            "score": 48,
+            "author_name": "Nesher86",
+            "creation_time_utc": "2024-09-13 18:59:57"
+        },
+        {
+            "id": "lmyp43i",
+            "text": "[https://status.atera.com/](https://status.atera.com/)\n\nStatus for Atera confirms they are aware of it and investigating.",
+            "score": 14,
+            "author_name": "Zombieworldwar",
+            "creation_time_utc": "2024-09-13 17:58:26"
+        },
+        {
+            "id": "lmyg600",
+            "text": "s1 just killed all atera’s for me :(. waiting to see what happened and if i’d need to reinstall",
+            "score": 10,
+            "author_name": "reb00tmaster",
+            "creation_time_utc": "2024-09-13 17:10:16"
+        },
+        {
+            "id": "lmygvqe",
+            "text": "Same here. Dead in the water",
+            "score": 10,
+            "author_name": "crazycamo4620",
+            "creation_time_utc": "2024-09-13 17:13:50"
+        },
+        {
+            "id": "lmydr1p",
+            "text": "interesting. [https://usea1-pax8.sentinelone.net/](https://usea1-pax8.sentinelone.net/) is currently up for me.",
+            "score": 7,
+            "author_name": "bourntech",
+            "creation_time_utc": "2024-09-13 16:57:15"
+        },
+        {
+            "id": "lmyzgac",
+            "text": "I spoke with Pax8 again, they state that still no word on if Atera was compromised or if this is a true false positive. Concerning as we move into 3 hours now.",
+            "score": 8,
+            "author_name": "chrisnlbc",
+            "creation_time_utc": "2024-09-13 18:54:56"
+        },
+        {
+            "id": "lmzfxk6",
+            "text": "Atera was used by a threat actor, and the hash in question was listed in this report: https://symantec-enterprise-blogs.security.com/threat-intelligence/ransomhub-knight-ransomware  \nIt's not uncommon for threat actors to use legitimate software.",
+            "score": 7,
+            "author_name": "bamed",
+            "creation_time_utc": "2024-09-13 20:25:59"
+        },
+        {
+            "id": "lmyavg4",
+            "text": "Wondering how this killed Atera? I don't use Atera but just asking so I can understand better.",
+            "score": 4,
+            "author_name": "B1tN1nja",
+            "creation_time_utc": "2024-09-13 16:41:42"
+        },
+        {
+            "id": "lmz0cx7",
+            "text": "Firstly, please accept our apologies for this inconvenience you have experienced.\n\nWe are aware that certain versions of Atera agents have been incorrectly classified by SentinelOne.\n\nOur Product, Security, R&D and Support teams are taking this seriously and working tirelessly with the SentintelOne team to resolve this as quickly as possible. \n\nWe are already in contact with SentinelOne to correct this. We’re optimistic that the Atera Agent will be promptly whitelisted again.\n\nWe will keep you informed of any developments as soon as possible!",
+            "score": 3,
+            "author_name": "GilGi_Atera",
+            "creation_time_utc": "2024-09-13 18:59:50"
+        },
+        {
+            "id": "lmymdk2",
+            "text": "Is there any impact if you don’t use Atera?  The console is slow and I’m looking at endpoints reporting offline…but they aren’t offline.  I’m on a few of them remotely.  Not seeing anything disturbing the endpoints themselves thank goodness",
+            "score": 2,
+            "author_name": "Apprehensive_Mode686",
+            "creation_time_utc": "2024-09-13 17:43:36"
+        }
+    ]
+}

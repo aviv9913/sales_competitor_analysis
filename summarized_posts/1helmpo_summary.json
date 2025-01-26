@@ -1,0 +1,12 @@
+{
+    "is_customer": true,
+    "summary": "The poster expresses their frustration over SentinelOne's failure to detect a significant malware infection on a client's PC, despite having installed it just before integrating Blackpoint Cyber, which subsequently identified the threats.",
+    "competitor": "Blackpoint Cyber",
+    "advantages": [],
+    "disadvantages": [
+        "Security Performance",
+        "Customer Support"
+    ],
+    "sentiment": "Negative",
+    "id": "1helmpo"
+}

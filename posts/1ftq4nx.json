@@ -1,0 +1,81 @@
+{
+    "title": "Anyone Using SentinelOne's Vulnerability Management?",
+    "text": "Turned it on recently, returned a pile of ancient 10-year old .NET Framework CVEs for a box that is fully up-to-date according to Windows Update (minus a few hardware drivers), so not sure how/what they're doing to discover vulnerabilities, but out of the gate, this seems like another source of noise in an already noisy world we live in.",
+    "score": 6,
+    "creation_time_utc": "2024-10-01 14:57:11",
+    "id": "1ftq4nx",
+    "url": "https://www.reddit.com/r/msp/comments/1ftq4nx/anyone_using_sentinelones_vulnerability_management/",
+    "author_name": "FlickKnocker",
+    "comments": [
+        {
+            "id": "lptm1zr",
+            "text": "I don't use their product, but do they give you evidence indicating where they see the old versions?  Windows Update is only patching the items deployed via the OS, if you have any of the versions installed that show up in the Add/Remove Programs list, then those are likely not getting patched via Windows Update.  Dotnet 6/7/8 hosting bundles for example will need to be patched manually.  \n\nThere are dotnet management scripts out there as you can have multiple versions installed on systems as needed for various applications.  There is also a difference between the runtime, desktop, hosting bundles etc.",
+            "score": 5,
+            "author_name": "justmirsk",
+            "creation_time_utc": "2024-10-01 15:07:14"
+        },
+        {
+            "id": "lptnjnk",
+            "text": "If it sees installers laying around for an app that has a CVE, even if the app isn’t installed, it will cause a detection. One example of this is the Veeam Agent for Linux or Mac coming up as a CVE on your Veeam Backup and Replication server, which is running Windows. But a copy of those installers are included with the server. \n\nYou don’t have to use the vulnerability scanning and it’s off by default. I think it’s easier to work with that Nessus, but it depends on what you’re trying to do and at what scale.",
+            "score": 2,
+            "author_name": "IllustriousRaccoon25",
+            "creation_time_utc": "2024-10-01 15:15:25"
+        },
+        {
+            "id": "lpw3dct",
+            "text": "Wait... where is that at?",
+            "score": 2,
+            "author_name": "Slight_Manufacturer6",
+            "creation_time_utc": "2024-10-01 23:05:55"
+        },
+        {
+            "id": "lptp27g",
+            "text": "We've been using it for a while. It helped us find that Syncro wasn't doing all the third party patching they promised, and ended up scripting updates with Chocolatey and Powershell. The .NET stuff is weird though. Some software requires older versions of .NET installed and some of those versions have known vulnerabilities.",
+            "score": 1,
+            "author_name": "tacos_y_burritos",
+            "creation_time_utc": "2024-10-01 15:23:40"
+        },
+        {
+            "id": "lpumzcv",
+            "text": "we attempted to use it, but their were to many false positives. When I opened a ticket, they confirmed it was a false positive and they would fix it on their end. We stopped after that.",
+            "score": 1,
+            "author_name": "A1rizzo",
+            "creation_time_utc": "2024-10-01 18:23:46"
+        },
+        {
+            "id": "lpui5rk",
+            "text": "Find me a Vuln scanner that doesn't feel like noise on initial deployment and I'll find you $100mil",
+            "score": 1,
+            "author_name": "Defconx19",
+            "creation_time_utc": "2024-10-01 17:58:27"
+        },
+        {
+            "id": "lptmwqp",
+            "text": "Interesting.  The CVE KB from Microsoft states that Windows Update will update the vulnerable versions under the Action section, so assumed it would've patched this.  I'll dig into this further. And to answer your question, no, doesn't mention anything as to how the CVEs are discovered.",
+            "score": 1,
+            "author_name": "FlickKnocker",
+            "creation_time_utc": "2024-10-01 15:11:55"
+        },
+        {
+            "id": "lpto2r1",
+            "text": "Yeah, Nessus was/is the gold standard, but I just saw this feature and figured I'd try it out.  Also looking at ConnectSecure, which includes remediation steps (patch links basically).",
+            "score": 2,
+            "author_name": "FlickKnocker",
+            "creation_time_utc": "2024-10-01 15:18:19"
+        },
+        {
+            "id": "lptzz4o",
+            "text": "Yep, discovering that now that I'm looking in add/remove programs.  Do you know how they're determining whether there is a vulnerability or not?",
+            "score": 1,
+            "author_name": "FlickKnocker",
+            "creation_time_utc": "2024-10-01 16:23:13"
+        },
+        {
+            "id": "lpupmma",
+            "text": "Very true!  It's just been a bit of a frustrating experience, in general: the remediation isn't always clear cut, feels like patch management is letting you down too, and then of course false positives that can be tricky to confirm/deny.  Red teams have it soooo much easier lol",
+            "score": 1,
+            "author_name": "FlickKnocker",
+            "creation_time_utc": "2024-10-01 18:37:31"
+        }
+    ]
+}
